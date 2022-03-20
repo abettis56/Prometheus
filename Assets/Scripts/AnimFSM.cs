@@ -48,6 +48,8 @@ namespace Prometheus
         public void PlayAnim(string animKey)
         {
             string animName = this._activeState[animKey];
+
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName(this._activeState[animKey])) return;
             this._animator.Play(animName);
         }
 
