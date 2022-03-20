@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,8 @@ public class PlayerBehavior : MonoBehaviour
 {
     Player player;
 
-    float xAxisInput;
-    float yAxisInput;
+    int xAxisInput;
+    int yAxisInput;
 
     void Start()
     {
