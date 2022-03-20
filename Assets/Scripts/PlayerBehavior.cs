@@ -13,7 +13,9 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        player = new Player(3, 5.0f, true, gameObject.GetComponent<Rigidbody2D>());
+        Rigidbody2D rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        Animator animator = gameObject.GetComponent<Animator>();
+        player = new Player(3, 5.0f, true, rigidBody, animator);
     }
 
     void Update()
