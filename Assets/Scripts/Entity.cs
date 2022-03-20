@@ -22,6 +22,7 @@ namespace Prometheus
 
         public void Move(float x, float y)
         {
+            if(!this._canMove) { return; }
             this._physicsBody.velocity = new Vector2(x, y).normalized * this._moveSpeed;
         }
     }
