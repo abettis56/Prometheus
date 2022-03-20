@@ -12,6 +12,8 @@ namespace Prometheus
         private Dictionary<string, string> _left;
         private Dictionary<string, string> _right;
 
+        private string _lastPlayedAnim;
+
         private Dictionary<string, string> _activeState;
 
         public AnimFSM(Animator animator)
@@ -49,7 +51,8 @@ namespace Prometheus
         {
             string animName = this._activeState[animKey];
 
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName(this._activeState[animKey])) return;
+            if (this._lastPlayedAnim == animName) return;
+            this._lastPlayedAnim = animName;
             this._animator.Play(animName);
         }
 
