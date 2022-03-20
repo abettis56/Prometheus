@@ -74,3 +74,4 @@ crashlytics-build.properties
 # Since art assets should not be released in an open-source format,
 # ignore them.
 Assets/Art/*
+Assets/Tilemaps/*
