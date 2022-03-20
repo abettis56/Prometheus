@@ -20,8 +20,8 @@ public class PlayerBehavior : MonoBehaviour
 
     void Update()
     {
-        xAxisInput = Input.GetAxisRaw("Horizontal");
-        yAxisInput = Input.GetAxisRaw("Vertical");
+        xAxisInput = (int)Math.Round(Input.GetAxisRaw("Horizontal"));
+        yAxisInput = (int)Math.Round(Input.GetAxisRaw("Vertical"));
     }
 
     void FixedUpdate()
